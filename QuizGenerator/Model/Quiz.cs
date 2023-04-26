@@ -8,6 +8,7 @@ namespace QuizGenerator.Model
 {
     internal class Quiz
     {
+        public int QuizID { get; set; }
         public Question Question { get; set; }
         public Answer answer { get; set; }
     }

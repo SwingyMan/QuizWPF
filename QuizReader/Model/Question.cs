@@ -8,6 +8,7 @@ namespace QuizReader.Model
 {
     public class Question
     {
+        public int QuestionID { get; set; }
         public string Quest { get; set; }
     }
 }

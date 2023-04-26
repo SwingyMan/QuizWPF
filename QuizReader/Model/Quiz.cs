@@ -8,7 +8,7 @@ namespace QuizReader.Model
 {
    public class Quiz
     {
-
+        public int QuizID { get; set; }
         public Question Question { get; set; }
         public Answer answer { get; set; }
     }

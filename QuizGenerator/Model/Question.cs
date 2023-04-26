@@ -8,6 +8,7 @@ namespace QuizGenerator.Model
 {
     internal class Question
     {
+        public string QuestionID { get; set; }
         public string Quest { get; set; }
     }
 }
