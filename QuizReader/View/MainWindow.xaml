@@ -23,8 +23,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <TextBox Name="lblTimer" Margin="10,10,613,369" Text="{Binding Path=CurrentTime}"/>
         <TextBlock x:Name="QuestionText" HorizontalAlignment="Left" Margin="283,49,0,0" TextWrapping="Wrap" Text="{Binding QuestionText}" VerticalAlignment="Top"/>
         <TextBox x:Name="PointSum" HorizontalAlignment="Left" Margin="521,47,0,0" TextWrapping="Wrap" Text="{Binding PointSum}" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-       
+        <Button Content="Rozpocznij" Command="{Binding Start}" IsEnabled="{Binding startEnable}" HorizontalAlignment="Left" Margin="157,381,0,0" VerticalAlignment="Top"/>
+        <Button Content="Zakończ" Command="{Binding Stop}" IsEnabled="{Binding stopEnable}" HorizontalAlignment="Left" Margin="378,381,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
