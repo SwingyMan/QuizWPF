@@ -13,6 +13,6 @@ namespace QuizGenerator.Model
         public string AnswerB { get; set; }
         public string AnswerC { get; set; }
         public string AnswerD { get; set; }
-        public enum CorrectAnswer { A, B, C, D }
+        public string CorrectAnswer { get; set; } 
     }
 }
