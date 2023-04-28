@@ -11,5 +11,12 @@ namespace QuizReader.Model
         public int QuizID { get; set; }
         public Question Question { get; set; }
         public Answer answer { get; set; }
+        public string QuestName { get; set; }
+        public Quiz(Question question, Answer answer, string QuestName)
+        {
+            this.QuestName = QuestName;
+            Question = question;
+            this.answer = answer;
+        }
     }
 }

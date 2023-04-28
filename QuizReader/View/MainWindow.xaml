@@ -1,0 +1,33 @@
+﻿<Window x:Class="QuizReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuizReader"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Wczytaj Quiz" HorizontalAlignment="Left"  Margin="680,400,1,0" VerticalAlignment="Top" Command="{Binding LoadQuiz}"/>
+        <Button x:Name="AnswerAButton" Content="A" HorizontalAlignment="Left" Margin="238,174,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerA}" IsEnabled="{Binding activate}"/>
+        <Button x:Name="AnswerBButton" Content="B" HorizontalAlignment="Left" Margin="344,174,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerB}" IsEnabled="{Binding activate}"/>
+        <Button x:Name="AnswerCButton" Content="C" HorizontalAlignment="Left" Margin="238,256,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerC}" IsEnabled="{Binding activate}"/>
+        <Button x:Name="AnswerDButton" Content="D" HorizontalAlignment="Left" Margin="344,256,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerD}" IsEnabled="{Binding activate}"/>
+        <TextBlock x:Name="AnswerAText" HorizontalAlignment="Left" Margin="238,146,0,0" TextWrapping="Wrap" Text="{Binding AnswerAText}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="AnswerBText" HorizontalAlignment="Left" Margin="344,146,0,0" TextWrapping="Wrap" Text="{Binding AnswerBText}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="AnswerCText" HorizontalAlignment="Left" Margin="238,229,0,0" TextWrapping="Wrap" Text="{Binding AnswerCText}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="AnswerDText" HorizontalAlignment="Left" Margin="343,229,0,0" TextWrapping="Wrap" Text="{Binding AnswerDText}" VerticalAlignment="Top"/>
+        <ListView x:Name="QuestionList" ItemsSource="{Binding listed}" Height="NaN" Width="NaN" Margin="646,5,10,53" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="Kategoria"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Name="lblTimer" Margin="10,10,613,369" Text="{Binding Path=CurrentTime}"/>
+        <TextBlock x:Name="QuestionText" HorizontalAlignment="Left" Margin="283,49,0,0" TextWrapping="Wrap" Text="{Binding QuestionText}" VerticalAlignment="Top"/>
+        <TextBox x:Name="PointSum" HorizontalAlignment="Left" Margin="521,47,0,0" TextWrapping="Wrap" Text="{Binding PointSum}" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <Button Content="Rozpocznij" Command="{Binding Start}" IsEnabled="{Binding startEnable}" HorizontalAlignment="Left" Margin="157,381,0,0" VerticalAlignment="Top"/>
+        <Button Content="Zakończ" Command="{Binding Stop}" IsEnabled="{Binding stopEnable}" HorizontalAlignment="Left" Margin="378,381,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

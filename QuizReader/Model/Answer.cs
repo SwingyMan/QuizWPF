@@ -13,6 +13,14 @@ namespace QuizReader.Model
         public string AnswerB { get; set; }
         public string AnswerC { get; set; }
         public string AnswerD { get; set; }
-        public enum CorrectAnswer { A, B, C, D }
+        public string CorrectAnswer {get;set; }
+        public Answer(string answerA, string answerB, string answerC, string answerD, string correctAnswer )
+        {
+            AnswerA = answerA;
+            AnswerB = answerB;
+            AnswerC = answerC;
+            AnswerD = answerD;
+            CorrectAnswer = correctAnswer;
+        }
     }
 }
