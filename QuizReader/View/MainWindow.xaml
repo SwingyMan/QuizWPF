@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizReader"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Button Content="Wczytaj Quiz" HorizontalAlignment="Left"  Margin="680,400,1,0" VerticalAlignment="Top" Command="{Binding LoadQuiz}"/>
+
+        <Button Content="Wczytaj Quiz" HorizontalAlignment="Left"  Margin="682,386,0,0" VerticalAlignment="Top" Command="{Binding LoadQuiz}"/>
         <Button x:Name="AnswerAButton" Content="A" HorizontalAlignment="Left" Margin="238,174,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerA}" IsEnabled="{Binding activate}"/>
         <Button x:Name="AnswerBButton" Content="B" HorizontalAlignment="Left" Margin="344,174,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerB}" IsEnabled="{Binding activate}"/>
         <Button x:Name="AnswerCButton" Content="C" HorizontalAlignment="Left" Margin="238,256,0,0" VerticalAlignment="Top" Width="34" Command="{Binding AnswerC}" IsEnabled="{Binding activate}"/>
@@ -28,6 +29,5 @@
         <TextBox x:Name="PointSum" HorizontalAlignment="Left" Margin="521,47,0,0" TextWrapping="Wrap" Text="{Binding PointSum}" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
         <Button Content="Rozpocznij" Command="{Binding Start}" IsEnabled="{Binding startEnable}" HorizontalAlignment="Left" Margin="157,381,0,0" VerticalAlignment="Top"/>
         <Button Content="Zakończ" Command="{Binding Stop}" IsEnabled="{Binding stopEnable}" HorizontalAlignment="Left" Margin="378,381,0,0" VerticalAlignment="Top"/>
-
     </Grid>
 </Window>
