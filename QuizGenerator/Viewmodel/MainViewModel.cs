@@ -134,14 +134,14 @@ namespace QuizGenerator.ViewModel
         {
             if (quest == null)
             {
-                AnswerAText = string.Empty;
-                AnswerBText = string.Empty;
-                AnswerCText = string.Empty;
-                AnswerDText = string.Empty;
-                QuestionText = string.Empty;
+                AnswerAText = "A";
+                AnswerBText = "B";
+                AnswerCText = "C";
+                AnswerDText = "D";
+                QuestionText = "Treść";
                 listed = listQuiz.AsStrings();
-                CorrectAnswer = string.Empty;
-                QuestionName = string.Empty;
+                CorrectAnswer = "a";
+                QuestionName = "Nazwa";
                 setRadio(string.Empty);
             }
             else
