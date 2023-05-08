@@ -101,7 +101,6 @@ namespace QuizReader.ViewModel
             startEnable = false;
             stopEnable = true;
             listed = listQuiz.QuizList.Select(x => x.QuestName).ToList();
-
             score = new Score(0, listQuiz.QuizList.Count);
             if (listed.Count != 0)
             {
