@@ -91,7 +91,7 @@ namespace QuizReader.ViewModel
         private void loadQuiz(object obj)
         {
             listQuiz.initialize();
-
+            listed = listQuiz.QuizList.Select(x => x.QuestName).ToList();
             startEnable = true;
 
         }
@@ -100,8 +100,9 @@ namespace QuizReader.ViewModel
             _timer.Start();
             startEnable = false;
             stopEnable = true;
-            score = new Score(0, listQuiz.QuizList.Count);
             listed = listQuiz.QuizList.Select(x => x.QuestName).ToList();
+
+            score = new Score(0, listQuiz.QuizList.Count);
             if (listed.Count != 0)
             {
                 counter = 0;
@@ -149,19 +150,19 @@ namespace QuizReader.ViewModel
         }
         private void ButtonA(object obj)
         {
-            button_reaction("A");
+            button_reaction("559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd");
         }
         private void ButtonB(object obj)
         {
-            button_reaction("B");
+            button_reaction("df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c");
         }
         private void ButtonC(object obj)
         {
-            button_reaction("C");
+            button_reaction("6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d");
         }
         private void ButtonD(object obj)
         {
-            button_reaction("D");
+            button_reaction("3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43");
         }
         void button_reaction(string answer)
         {
