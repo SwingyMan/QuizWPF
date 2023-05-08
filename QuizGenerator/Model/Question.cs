@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace QuizGenerator.Model
 {
-    internal class Question
+    public class Question
     {
-        public string QuestionID { get; set; }
+        public int QuestionID { get; set; }
         public string Quest { get; set; }
+        public Question(string Quest)
+        { this.Quest = Quest; }
     }
 }
